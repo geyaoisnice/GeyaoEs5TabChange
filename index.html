@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="tab J_tab"></div>
+        <!-- <div class="nav">
+            <div class="nav-item current">选项1</div>
+            <div class="nav-item">选项2</div>
+            <div class="nav-item">选项3</div>
+        </div> -->
+        <script type="text/html" id="J_navItemTpl">
+            <div class="{{navStyleClass}}">{{navItemTitle}}</div>
+        </script>
+        <!-- <div class="page">
+            <div class="page-item current">页面1</div>
+            <div class="page-item">页面2</div>
+            <div class="page-item">页面3</div>
+        </div> -->
+        <script type="text/html" id="J_pageItemTpl">
+            <div class="{{pageStyleClass}}">
+                <p>{{city_name}}</p>
+                <p>{{intro}}</p>
+            </div>
+        </script>
+        <div style="display: none;" id="J_cityData">
+            [{
+            "id":"1",
+            "city_name":"歌谣",
+            "intro":"歌谣很棒"
+            },
+            {
+            "id":"2",
+            "city_name":"公众号",
+            "intro":"前端小歌谣"
+            },
+            {
+            "id":"3",
+            "city_name":"留言",
+            "intro":"歌谣爱你"
+            }]
+        </div>
+  
+    <script src="./tools.js"></script>
+    <script src="./index.js"></script>
+    <script type="text/javascript">
+        var tab = new Tab({
+            classObject: {
+                el: '.J_tab'
+            }
+        }).init()
+    </script>
+</body>
+
+</html>
